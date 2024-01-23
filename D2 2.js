@@ -27,7 +27,6 @@ if (num3 !== 5) {
 
 
 
-
 /* ESERCIZIO 3
   Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: usa l'operatore modulo)
 */
@@ -45,9 +44,6 @@ if (num4%5 === 0) {
 /* ESERCIZIO 4
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
-
-
-
 
 let num5 = 17
 let num6 = 64
@@ -70,21 +66,14 @@ if (num5 === 8 || num6 === 8) {
 
 
 let freeShipping
+let totalShoppingCart = 52
 
-let totalShoppingCart = {
-  total: 51,
-  hasFreeShipping: true
+if(totalShoppingCart>50) {
+  freeShipping = true;
+} else {freeShipping = false;}
 
-}
-
-
-if (totalShoppingCart.hasFreeShipping) {
-  freeShipping = true; 
-} else {
-  freeShipping = false;
-}
- 
 console.log("Ha l'utente la spedizione gratuita?", freeShipping)
+
 
 
 
@@ -94,6 +83,15 @@ console.log("Ha l'utente la spedizione gratuita?", freeShipping)
 */
 
 
+let discountValue = (totalShoppingCart / 100) * 20;
+
+let discountedShopping = (totalShoppingCart - discountValue)
+
+if (discountedShopping>50) {
+  freeShipping = true;
+} else {freeShipping = false;}
+
+console.log("Ha l'utente la spedizione gratuita?", freeShipping)
 
 
 
@@ -103,9 +101,14 @@ console.log("Ha l'utente la spedizione gratuita?", freeShipping)
   Alla fine mostra il risultato in console.
 */
 
-let num7 = 5
-let num8 = 32
-let num9 = 25
+let num7 = 32
+let num8 = 18
+let num9 = 24
+
+if (num7 > num8 && num8 > num9) {
+  console.log (num7, num8, num9)
+} 
+
 
 
 
@@ -198,7 +201,7 @@ console.log(numbers);
 
 
 /* ESERCIZIO 15
-  Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
+Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
 numbers.splice(9,1,100)
